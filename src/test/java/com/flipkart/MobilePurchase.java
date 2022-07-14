@@ -53,24 +53,24 @@ public class MobilePurchase {
 		System.out.println("Time Taken:"+(end-Start));
 	}
 	@Test
-	public void flip1() {
+	public void part1() {
 		WebElement X=driver.findElement(By.xpath("//button[text()='✕']"));
 		X.click();
 	}
 	@Test
-	public void flip2() {
+	public void part2() {
 		WebElement Search=driver.findElement(By.xpath("//input[@type='text']"));
 		Search.sendKeys("Redmi Mobiles",Keys.ENTER);
 	}
 	@Test
-	public void flip3() throws Throwable  {
+	public void part3() throws Throwable  {
 		Thread.sleep(1000);
 		WebElement Mob1=driver.findElement(By.xpath("(//div[@class='_4rR01T'])[1]"));
 		Text=Mob1.getText();
 		System.out.println(Text);
 	}
 	@Test
-	public void flip4() throws Throwable {
+	public void part4() throws Throwable {
 		Thread.sleep(1000);
 		WebElement Mob1=driver.findElement(By.xpath("(//div[@class='_4rR01T'])[1]"));
 		Mob1.click();
@@ -82,7 +82,7 @@ public class MobilePurchase {
 		Mob3.click();
 	}
 	@Test
-	public void flip5() throws Throwable {
+	public void part5() throws Throwable {
 		Set<String> WH=driver.getWindowHandles();
 		List<String> WH1=new ArrayList<String>(WH);
 		for(String Y:WH1) {
@@ -108,15 +108,14 @@ public class MobilePurchase {
 		WB.write(F2);
 	}
 	@Test
-	public void flip6() throws Throwable {
+	public void part6() throws Throwable {
 		TakesScreenshot TK=(TakesScreenshot)driver;
 		File F1=TK.getScreenshotAs(OutputType.FILE);
 		File L= new File("C:\\Users\\sarav\\eclipse-workspace\\Excel\\Junit\\src\\test\\resources\\Screenshot");
 		FileUtils.copyFile(F1,L);
-		System.out.println("flip6");
 	}
 	@Test
-	public void flip7() {
+	public void part7() {
 		if(Text.equals(Text1)) {
 			System.out.println("Pass");
 		}else {
